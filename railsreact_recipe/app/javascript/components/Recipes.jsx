@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import Search from "./Search";
 
 class Recipes extends React.Component {
 	constructor(props) {
@@ -51,12 +52,15 @@ class Recipes extends React.Component {
 			<>
 				<section className="jumbotron jumbotron-fluid text-center">
 					<div className="container py-5">
-						<h1 className="display-4">Recipes for every occasion PINEAPPLE</h1>
+						<h1 className="display-4">
+							Recipes for when you're feeling like having family for dinner.
+						</h1>
 						<p className="lead text-muted">
-							We’ve pulled together our most popular recipes, our latest
-							additions, and our editor’s picks, so there’s sure to be something
-							tempting for you to try. PINEAPPLE
+							These are super popular recipes from around the world for people
+							who tire of contributing to factory farms and want to do their
+							part to help with climate change.
 						</p>
+						{/* <Search /> */}
 					</div>
 				</section>
 				<div className="py-5">
