@@ -1,15 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Search from "./Search";
+import Search from "./Search";
 
 class Recipes extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			recipes: []
+			recipes: [],
+			searchString: ""
 		};
+		this.getAllRecipes = this.getAllRecipes.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSearchFilter = this.handleSearchFilter.bind(this);
 	}
 	componentDidMount() {
+		this.getAllRecipes();
+	}
+	getAllRecipes() {
 		const url = "/api/v1/recipes/index";
 		fetch(url)
 			.then(response => {
@@ -20,6 +27,21 @@ class Recipes extends React.Component {
 			})
 			.then(response => this.setState({ recipes: response }))
 			.catch(() => this.props.history.push("/"));
+	}
+	handleChange(event) {
+		const { value } = event.target;
+		this.setState({
+			searchString: value
+		});
+	}
+	handleSearchFilter() {
+		const filteredRecipes = this.state.recipes.filter(recipe => {
+			return recipe.name === this.state.searchString;
+		});
+		this.setState({
+			recipes: filteredRecipes,
+			searchString: ""
+		});
 	}
 	render() {
 		const { recipes } = this.state;
@@ -60,7 +82,12 @@ class Recipes extends React.Component {
 							who tire of contributing to factory farms and want to do their
 							part to help with climate change.
 						</p>
-						{/* <Search /> */}
+						<Search
+							handleChange={this.handleChange}
+							searchString={this.state.searchString}
+							handleSearchFilter={this.handleSearchFilter}
+							getAllRecipes={this.getAllRecipes}
+						/>
 					</div>
 				</section>
 				<div className="py-5">
