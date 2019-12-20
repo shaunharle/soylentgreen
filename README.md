@@ -1,37 +1,23 @@
 # soylentgreen
 
 ## The Concept:
-I will make a web app which will, after making 2 or 3 selections, allow you to paste a recipe into an input field which will then use a database of terms to replace parts of it make the recipe vegan. People don't realize that they can take nearly any recipe and make it vegan, so it'll be primarily to illustrate that point. The reason for the questions before being able to enter the recipe is because you'll use different styles of replacements if it's baking vs cooking.
+Display recipes and have the ability to search if you know the name of the recipe you're looking for.
 
 ## MVP
-The ability to paste in a recipe and get back a converted recipe that isn't total gibberish
-
-## Stretch goals
-I'm not sure. Have another tab for cute animal gifs from giphy? It's a relatively simple concept but I think trying to find different curveball terms to switch out with vegetable based products will be tedious so my MVP may be pretty difficult.
+Display recipes and have a search function.
 
 
 ## Tech I'm planning to use:
-- Styled components
 - Ruby on Rails backend
-- React front end (though may switch to ejs as a last resort)
+- React front end
+- Webpacker to really tie things together in an overly complicated manner.
+- Bootstrap
+- Heroku
+
+## Current thoughts
+I think it's really neat that I was able to build this and make it run on only one server, but I would not have intentionally chosen that method of accomplishing this task if I knew what it was going to be like.
 
 
 
-## Expected blockers
-- I think that just switching out a couple of terms may result in some recipes that seem like broken English and be slightly less readable
-- Some recipes just won't outright convert, i.e. you can't make an omelette with applesauce instead of eggs, so that conversion won't work properly.
-- 
-
-
-
-## Wireframing
-![Imgur](https://i.imgur.com/U5YNaEt.jpg)
-![Imgur](https://i.imgur.com/OvBF3sj.jpg)
-![Imgur](https://i.imgur.com/svkcqF4.jpg)
-
-
-
-
-
-
-
+## Later plans
+I'd very much like to go back into this and adjust the create route so I can have custom pictures so it's not the same picture for everything, aside from having to manually seed the database, which kind of defeats the purpose of having the create route. I'd also like to mess with the search function and do a bunch of styling.
