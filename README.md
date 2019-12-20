@@ -1,5 +1,8 @@
 # soylentgreen
 
+## Live link:
+https://soylentgreen.herokuapp.com/
+
 ## The Concept:
 Display recipes and have the ability to search if you know the name of the recipe you're looking for.
 
@@ -7,7 +10,7 @@ Display recipes and have the ability to search if you know the name of the recip
 Display recipes and have a search function.
 
 
-## Tech I'm planning to use:
+## Tech used:
 - Ruby on Rails backend
 - React front end
 - Webpacker to really tie things together in an overly complicated manner.
